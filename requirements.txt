@@ -1,0 +1,7 @@
+numpy
+pandas
+seaborn
+ptflops
+codecarbon
+pyjoules
+torchvision
