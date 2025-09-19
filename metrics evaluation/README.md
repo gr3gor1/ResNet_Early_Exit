@@ -8,11 +8,6 @@
 
 ### The configuration of summarize.py should look like this:
 
-<code>
---src
-"C:\Users\..\Desktop\ResNet_Early_Exit\pretrained_models/"
---dest
-"C:\Users/../Desktop/ResNet_Early_Exit/data/"
---data
-"C:\Users/../Desktop/ResNet_Early_Exit/data/"
+<code>--src "C:\Users\..\Desktop\ResNet_Early_Exit\pretrained_models/"
+--dest "C:\Users/../Desktop/ResNet_Early_Exit/data/" --data "C:\Users/../Desktop/ResNet_Early_Exit/data/"
 </code>
