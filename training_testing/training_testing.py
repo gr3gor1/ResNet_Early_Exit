@@ -20,7 +20,7 @@ def training(layers,train_loader, valid_loader, path, itsfifty=False, variant=No
   else:
     model = ResNet(ResidualBlock, layers).to(device)
 
-  #Loss and optimizer
+  # Loss and optimizer
   criterion = nn.CrossEntropyLoss()
   optimizer = torch.optim.SGD(model.parameters(), lr=0.01, weight_decay = 0.001, momentum = 0.9)
 
@@ -56,7 +56,7 @@ def training(layers,train_loader, valid_loader, path, itsfifty=False, variant=No
   print(f"Elapsed time: {end - start:.4f} seconds")
 
 
-  #Validation
+  # Validation
   with torch.no_grad():
       correct = 0
       total = 0
@@ -70,7 +70,7 @@ def training(layers,train_loader, valid_loader, path, itsfifty=False, variant=No
 
   print('Accuracy of the network on the {} validation images: {} %'.format(5000, 100 * correct / total))
 
-  #Save the model
+  # Save the model
   if variant != None:
     variant = str(variant)
     torch.save(model.state_dict(), path + "/model_weights_resnet" + str(variant) + ".pth")

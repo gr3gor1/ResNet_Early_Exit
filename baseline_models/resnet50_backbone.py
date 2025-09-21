@@ -4,6 +4,7 @@ import torch.nn as nn
 class ResNet50(nn.Module):
     def __init__(self, block, layers, num_classes=1000):
         super(ResNet50, self).__init__()
+
         self.inplanes = 64
         self.conv1 = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=3, stride=2, padding=3, bias=False),
@@ -32,6 +33,7 @@ class ResNet50(nn.Module):
         layers = []
         layers.append(block(self.inplanes, planes, stride, downsample))
         self.inplanes = planes * block.expansion
+
         for _ in range(1, blocks):
             layers.append(block(self.inplanes, planes))
 

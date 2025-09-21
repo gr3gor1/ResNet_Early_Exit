@@ -137,8 +137,6 @@ def performance_metrics(model, test_loader, early=False):
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
 
-    accuracy = 100 * correct / total
-
     end = time.time()
 
     return 100 * correct / total, end-start

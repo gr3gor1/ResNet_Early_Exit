@@ -25,8 +25,8 @@ class ExitBlock50(nn.Module):
     def __init__(self, in_channels, num_classes, num_convs=1, reduction=0.25):
         super(ExitBlock50, self).__init__()
 
-        reduced_channels = max(16, int(in_channels * reduction))  # shrink channels
-        layers = [nn.Conv2d(in_channels, reduced_channels, kernel_size=1),  # bottleneck
+        reduced_channels = max(16, int(in_channels * reduction))
+        layers = [nn.Conv2d(in_channels, reduced_channels, kernel_size=1),
                   nn.BatchNorm2d(reduced_channels),
                   nn.ReLU(inplace=True)]
 
