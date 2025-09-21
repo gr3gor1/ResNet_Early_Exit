@@ -30,7 +30,7 @@ def training(layers,train_loader, valid_loader, path, itsfifty=False, variant=No
 
   scaler = torch.cuda.amp.GradScaler()
 
-  num_epochs = 1
+  num_epochs = 20
 
   for epoch in range(num_epochs):
     loop = tqdm(train_loader, total=len(train_loader), desc=f"Epoch {epoch+1}/{num_epochs}")

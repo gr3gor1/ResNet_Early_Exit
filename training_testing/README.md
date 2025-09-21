@@ -8,7 +8,6 @@
 
 ### We can use a configuration similar to this one:
 
-<code>--dest "C:\..\Desktop\ResNet_Early_Exit\dest" --data "C:\..\Desktop\ResNet_Early_Exit\data" 
---struct "[2,2,2,2]" --variant 18
-</code>
+`--dest "C:\..\Desktop\ResNet_Early_Exit\dest" --data "C:\..\Desktop\ResNet_Early_Exit\data" 
+--struct "[2,2,2,2]" --variant 18`
 
